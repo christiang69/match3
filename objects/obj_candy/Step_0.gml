@@ -42,12 +42,13 @@ if (swiped) {
 		swiped = false;
 		speed = 0;
 		if (c_power==3){
-			supermatch=t_candy.i;
-			i=supermatch;
+			supermatch=target_candy.c_type;
+			c_type=supermatch;
 			with (obj_candy){
-				if i==supermatch;
-				alarm[0] = delay;
-				exit;
+				if (c_type==supermatch)
+				{
+					alarm[0] = delay;
+				}
 			}
 		} else {
 			if (!b_swap){

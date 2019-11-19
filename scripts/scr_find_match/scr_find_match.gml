@@ -15,13 +15,13 @@ var rw=false;
 // top
 if (position_meeting(x, y-c_size, obj_candy)){
 	var t1o = instance_position(x, y-c_size, obj_candy);
-	if (t1o.i == i){
+	if (t1o.c_type == c_type){
 		t1 = true;
 	}
 }
 if (position_meeting(x, y-(c_size*2), obj_candy)){
 	var t2o = instance_position(x, y-(c_size*2), obj_candy);
-	if (t2o.i == i){
+	if (t2o.c_type == c_type){
 		t2 = true;
 	}
 }
@@ -29,13 +29,13 @@ if (position_meeting(x, y-(c_size*2), obj_candy)){
 // left
 if (position_meeting(x-c_size, y, obj_candy)){
 	var l1o = instance_position(x-c_size, y, obj_candy);
-	if (l1o.i == i){
+	if (l1o.c_type == c_type){
 		l1 = true;
 	}
 }
 if (position_meeting(x-(c_size*2), y, obj_candy)){
 	var l2o = instance_position(x-(c_size*2), y, obj_candy);
-	if (l2o.i == i){
+	if (l2o.c_type == c_type){
 		l2 = true;
 	}
 }
@@ -43,13 +43,13 @@ if (position_meeting(x-(c_size*2), y, obj_candy)){
 // bottom
 if (position_meeting(x, y+c_size, obj_candy)){
 	var b1o = instance_position(x, y+c_size, obj_candy);
-	if (b1o.i == i){
+	if (b1o.c_type == c_type){
 		b1 = true;
 	}
 }
 if (position_meeting(x, y+(c_size*2), obj_candy)){
 	var b2o = instance_position(x, y+(c_size*2), obj_candy);
-	if (b2o.i == i){
+	if (b2o.c_type == c_type){
 		b2 = true;
 	}
 }
@@ -57,13 +57,13 @@ if (position_meeting(x, y+(c_size*2), obj_candy)){
 // right
 if (position_meeting(x+c_size, y, obj_candy)){
 	var r1o = instance_position(x+c_size, y, obj_candy);
-	if (r1o.i == i){
+	if (r1o.c_type == c_type){
 		r1 = true;
 	}
 }
 if (position_meeting(x+(c_size*2), y, obj_candy)){
 	var r2o = instance_position(x+(c_size*2), y, obj_candy);
-	if (r2o.i == i){
+	if (r2o.c_type == c_type){
 		r2 = true;
 	}
 }
@@ -81,6 +81,7 @@ if (r1 && r2) rw = true;
 if (tw and bw){
 	// five straight vertical
 	c_power = 3;
+	c_type=6;
 	alarm[1] = delay;
 	t1o.alarm[0] = delay;
 	t2o.alarm[0] = delay;
@@ -91,6 +92,7 @@ if (tw and bw){
 if (lw and rw){
 	// five straight horizontal
 	c_power = 3;
+	c_type=6;
 	alarm[1] = delay;
 	r1o.alarm[0] = delay;
 	r2o.alarm[0] = delay;
@@ -111,6 +113,7 @@ if (tw and rw){
 if (tw and lw){
 	// five L
 	c_power = 3;
+	c_type=6;
 	alarm[1] = delay;
 	t1o.alarm[0] = delay;
 	t2o.alarm[0] = delay;
@@ -121,6 +124,7 @@ if (tw and lw){
 if (bw and rw){
 	// five L
 	c_power = 3;
+	c_type=6;
 	alarm[1] = delay;
 	r1o.alarm[0] = delay;
 	r2o.alarm[0] = delay;
@@ -131,11 +135,56 @@ if (bw and rw){
 if (bw and lw){
 	// five L
 	c_power = 3;
+	c_type=6;
 	alarm[1] = delay;
 	l1o.alarm[0] = delay;
 	l2o.alarm[0] = delay;
 	b1o.alarm[0] = delay;
 	b2o.alarm[0] = delay;
+	exit;
+}
+if (tw and r1 and l1){
+	// five T
+	c_power = 3;
+	c_type=6;
+	alarm[1] = delay;
+	t1o.alarm[0] = delay;
+	t2o.alarm[0] = delay;
+	r1o.alarm[0] = delay;
+	l1o.alarm[0] = delay;
+	exit;
+}
+if (bw and r1 and l1){
+	// five T
+	c_power = 3;
+	c_type=6;
+	alarm[1] = delay;
+	b1o.alarm[0] = delay;
+	b2o.alarm[0] = delay;
+	r1o.alarm[0] = delay;
+	l1o.alarm[0] = delay;
+	exit;
+}
+if (lw and t1 and b1){
+	// five T
+	c_power = 3;
+	c_type=6;
+	alarm[1] = delay;
+	l1o.alarm[0] = delay;
+	l2o.alarm[0] = delay;
+	t1o.alarm[0] = delay;
+	b1o.alarm[0] = delay;
+	exit;
+}
+if (rw and t1 and b1){
+	// five T
+	c_power = 3;
+	c_type=6;
+	alarm[1] = delay;
+	r1o.alarm[0] = delay;
+	r2o.alarm[0] = delay;
+	t1o.alarm[0] = delay;
+	b1.alarm[0] = delay;
 	exit;
 }
 if (tw and b1){
