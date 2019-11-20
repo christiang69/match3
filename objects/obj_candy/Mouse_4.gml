@@ -3,6 +3,6 @@ if (!busy){
 		drag_x = mouse_x;
 		drag_y = mouse_y;
 		dragging = true;
-		stable = false;
+		last_candy=id;
 	}
 }

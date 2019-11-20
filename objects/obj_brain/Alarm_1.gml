@@ -1,0 +1,1 @@
+global.moves -= 1;

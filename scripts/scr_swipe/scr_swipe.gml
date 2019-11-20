@@ -6,6 +6,7 @@ start_y = y;
 
 swiped = true;
 dragging = false;
+stable = false;
 
 target_candy = instance_position(target_x, target_y, obj_candy);
 
