@@ -33,7 +33,7 @@ switch(c_power){
 
 
 with(obj_candy){
-	if(x==bx) and (y < by){
-		alarm[4]=30+(point_distance(x, y, bx, by,)/64);
+	if((x==bx) and (y < by)){
+		alarm[4]=delay+(point_distance(x, y, bx, by,)/2);
 	}
 }

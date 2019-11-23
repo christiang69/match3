@@ -15,7 +15,10 @@ start_y = 0;
 nomatch = true;
 stable = false;
 
-//image_size=0.7;
+image_size = 0.9;
+angle = 0;
+
+counter = 0.01;
 
 c_type=irandom(5);
 
